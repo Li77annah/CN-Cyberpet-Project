@@ -13,9 +13,6 @@ const audioClown = document.getElementById("audioClown");
 const audioShark = document.getElementById("audioShark");
 const audioCrab = document.getElementById("audioCrab");
 
-
-
-
 let fishType;
 
 class Creature {
@@ -34,10 +31,9 @@ class Creature {
             fishPic.src = "fishPics/HappyCrab.png"
         }
     }
-
     sleep() {
         this.score++;
-        response.textContent = `${this._name} was sleepy: "ZZZZZZ". You now have ${this.score} scales`;
+        response.textContent = `${this._name} loves "ZZZZZZ". You now have ${this.score} scales`;
         if (fishType == "clown") {
             fishPic.src = "fishPics/HappyClownfish.png" 
         } else if (fishType == "shark") {
@@ -70,11 +66,9 @@ class Creature {
         } else {
             fishPic.src = "fishPics/SadCrab.png"
         }
-    }
-    
+    }  
 }
 
-// on click of choice pic appears
 clown.addEventListener ("click" , () => {
     fishPic.src = "fishPics/RealClownfish.png";
     fishType = "clown";
@@ -90,14 +84,10 @@ crab.addEventListener ("click" , () => {
     fishType = "crab"; 
 })
 
-// on submit of info name pet
-
 let fish;
 submit.addEventListener ("click" , () => {
     fish = new Creature (petName.value)
 })
-
-// step 3 comment
 
 feed.addEventListener ("click" , () => {
     fish.eat()
