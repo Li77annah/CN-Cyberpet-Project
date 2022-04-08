@@ -10,30 +10,28 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-
+        <div id="conts1through4">
         <div id = "container1">
             <header>
                 <h1>FISH TANK</h1>
             </header>
         </div>
-
         <div id = "container2">
-                <h2 id = "goal">Achieve 10 scales to keep your pet happy</h2>
-                <h2>Step 1: Choose your pet</h2>
-                <div id = "fishTypes">
-                    <button id = "clown" class="buttons">CLOWNFISH</button>
-                    <button id = "shark" class="buttons">SHARK</button>
-                    <button id = "crab" class="buttons">CRAB</button>
-                </div>
-                <!-- <img id = "fishpic"> -->
-                <img id = "fishpic" src="fishPics/QMark.jpg">
-                <div>
-                    <h2>Step 2: Name your pet</h2>
-                    <input id = "petName"></input>
-                    <button id = "submit" class="buttons">SUBMIT</button>
-                </div>
-        </div>
-            
+            <h2 id = "goal">Achieve 10 scales to keep your pet happy</h2>
+            <h2>Step 1: Choose your pet</h2>
+            <div id = "fishTypes">
+                <button id = "clown" class="buttons">CLOWNFISH</button>
+                <button id = "shark" class="buttons">SHARK</button>
+                <button id = "crab" class="buttons">CRAB</button>
+            </div>
+            <!-- <img id = "fishpic"> -->
+            <img id = "fishpic" src="fishPics/QMark.jpg">
+            <div>
+                <h2>Step 2: Name your pet</h2>
+                <input id = "petName"></input>
+                <button id = "submit" class="buttons">SUBMIT</button>
+            </div>
+    </div>
         <div id = "container3">
             <h2>Step 3: Choose activities</h2>
             <div id = "activities">
@@ -44,12 +42,18 @@
             </div>
             <p id = "response"></p>
         </div>
+        </div>                 
+        <div id = "container4">
         <div id = "fishSongs">
             <audio id = "audioClown" src="" autoplay = "false"  ></audio>
             <audio id = "audioShark" src="" autoplay = "false"></audio>
             <audio id = "audioCrab" src="" autoplay = "false"></audio>
-        </div> 
-
+        </div></div> 
+        <div id="container5">
+            <img src="" id="fishPicFinished">
+            <h2>WELL DONE! YOUR PET IS HAPPY!</h2>
+        
+        </div>
         <script src="fishTank.js" async defer></script>
     </body>
 </html>

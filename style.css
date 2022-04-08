@@ -11,6 +11,19 @@ body {
     background-size: cover;
     margin: auto;
 }
+#conts1through4{
+    display: flex;
+    text-align: center;
+}
+#container5 {
+    height: 400px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;     
+    display:none;
+    align-items: center;
+}
 
 #container2 {
     display: flex;
@@ -77,4 +90,9 @@ img {
     letter-spacing: 1px;
     padding: 10px 10px 10px 10px;
 }
-
+#container4 {
+    height: 80vh;
+    width:60vw;
+    border-radius: 18px;
+    display: none;
+}

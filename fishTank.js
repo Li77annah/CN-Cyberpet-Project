@@ -12,6 +12,12 @@ const sleep = document.getElementById ("sleep");
 const audioClown = document.getElementById("audioClown");
 const audioShark = document.getElementById("audioShark");
 const audioCrab = document.getElementById("audioCrab");
+const container1 = document.getElementById("container1");
+const container2 = document.getElementById("container2");
+const container3 = document.getElementById("container3");
+const container4 = document.getElementById("container4");
+const container5 = document.getElementById("container5");
+const fishPicFinished = document.getElementById("fishPicFinished");
 
 let fishType;
 
@@ -92,7 +98,19 @@ submit.addEventListener ("click" , () => {
 feed.addEventListener ("click" , () => {
     fish.eat()
     if (fish.score == 10) {
-        response.textContent = "WELL DONE! YOUR PET IS HAPPY!"
+        response.textContent = "WELL DONE! YOUR PET IS HAPPY!";
+        container1.style.display = "none";
+        container2.style.display = "none";
+        container3.style.display = "none";
+        container4.style.display = "none";
+        container5.style.display = "block";
+        if (fishType == "clown") {
+            fishPicFinished.src = "fishPics/HappyClownfish.png"
+        } else if (fishType == "shark") {
+            fishPicFinished.src = "fishPics/HappyShark.jpg"
+        } else {
+            fishPicFinished.src = "fishPics/HappyCrab.png"
+        }
     }
 })
 
@@ -106,4 +124,18 @@ clean.addEventListener ("click" , () => {
 
 sleep.addEventListener ("click" , () => {
     fish.sleep()
-})
+    if (fish.score == 10) {
+        response.textContent = "WELL DONE! YOUR PET IS HAPPY!";
+        container1.style.display = "none";
+        container2.style.display = "none";
+        container3.style.display = "none";
+        container4.style.display = "none";
+        container5.style.display = "block";
+        if (fishType == "clown") {
+            fishPicFinished.src = "fishPics/HappyClownfish.png"
+        } else if (fishType == "shark") {
+            fishPicFinished.src = "fishPics/HappyShark.jpg"
+        } else {
+            fishPicFinished.src = "fishPics/HappyCrab.png"
+        }
+}})
